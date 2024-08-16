@@ -2,10 +2,10 @@
   "name": "nodejs-mentoring",
   "version": "1.0.0",
   "description": "EPAM node.js mentoring Excercises and tasks ",
-  "main": "main.js",
   "type": "module",
   "scripts": {
-    "start": "node  main.js",
+    "start": "node -v && node main.js",
+    "dev": " node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/attilagal-epam/nodejs-mentoring/issues"
   },
-  "homepage": "https://github.com/attilagal-epam/nodejs-mentoring#readme"
+  "homepage": "https://github.com/attilagal-epam/nodejs-mentoring#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }

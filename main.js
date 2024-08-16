@@ -1,3 +1,3 @@
-import { task1_1 } from "./module1/index.js";
+import { default as getRandomNumber } from "./module1/index.js";
 
-console.log(task1_1());
+console.log(getRandomNumber());
