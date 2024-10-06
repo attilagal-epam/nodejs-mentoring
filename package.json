@@ -7,8 +7,12 @@
     "start": "node dist/index.js",
     "stop": "exit 0",
     "build": "tsc",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test": "jest test/index.test.ts  --reporters=default --reporters=jest-junit",
+    "test:all": "jest --reporters=default --reporters=jest-junit",
+    "test:coverage": "jest --coverage --coverageReporters=cobertura --coverageDirectory=. --testPathPattern='.*\\.test\\.ts'",
+    "test:unit": "jest --testPathPattern='unit.test' --reporters=default --reporters=jest-junit",
+    "test:integration": "jest --testPathPattern='integration.test' --reporters=default --reporters=jest-junit",
+    "test:e2e": "jest --testPathPattern='.e2e.test' --reporters=default --reporters=jest-junit",
     "coverage": "jest --coverage --reporters=jest-junit --coverageDirectory=.",
     "pretest": "npm run build",
     "posttest": "exit 0"
@@ -33,7 +37,9 @@
     "typescript": "^5.5.3",
     "@tsconfig/node20": "^20.1.4",
     "@types/axios": "^0.14.0",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "@types/supertest": "^2.0.12",
+    "supertest": "^6.2.4"
   },
   "dependencies": {
     "axios": "^1.7.2"
