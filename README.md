@@ -12,8 +12,8 @@ Run the following command in your project directory to install the necessary dep
 npm install
 ```
 
-2. Run a module between [1-4] by providing the module number as a parameter. I you do not provide a number it will run module 1 as default
+2. Run a module between [1-5] by providing the module number as a parameter. I you do not provide a number it will run module 1 as default
 
 ```
-npm start -- 4
+npm start -- 5
 ```

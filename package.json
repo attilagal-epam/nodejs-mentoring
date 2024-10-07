@@ -5,6 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
+    "start:server": "npm run build && npx pm2 start ./dist/module5/network.js --name ngmp-4-network-app",
+    "stop:server": "npx pm2 stop ngmp-4-network-app",
     "stop": "exit 0",
     "build": "tsc",
     "test": "jest test/index.test.ts  --reporters=default --reporters=jest-junit",
@@ -15,7 +17,9 @@
     "test:e2e": "jest --testPathPattern='.e2e.test' --reporters=default --reporters=jest-junit",
     "coverage": "jest --coverage --reporters=jest-junit --coverageDirectory=.",
     "pretest": "npm run build",
-    "posttest": "exit 0"
+    "posttest": "exit 0",
+    "pretest:server": "npm run start:server",
+    "posttest:server": "npm run stop:server"
   },
   "keywords": [],
   "author": "",
@@ -39,7 +43,9 @@
     "@types/axios": "^0.14.0",
     "ts-node": "^10.9.1",
     "@types/supertest": "^2.0.12",
-    "supertest": "^6.2.4"
+    "supertest": "^6.2.4",
+    "@types/uuid": "^9.0.6",
+    "pm2": "^5.3.0"
   },
   "dependencies": {
     "axios": "^1.7.2"
