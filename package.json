@@ -1,24 +1,35 @@
 {
-  "name": "nodejs-mentoring",
+  "name": "nodejs-gmp-solutions",
   "version": "1.0.0",
-  "description": "EPAM node.js mentoring Excercises and tasks ",
-  "type": "module",
+  "description": "",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node -v && node main.js",
-    "dev": " node main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/index.js",
+    "stop": "exit 0",
+    "build": "tsc",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "coverage": "jest --coverage --reporters=jest-junit --coverageDirectory=.",
+    "pretest": "npm run build",
+    "posttest": "exit 0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/attilagal-epam/nodejs-mentoring.git"
-  },
-  "author": "Attila Barnabas Gal",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/attilagal-epam/nodejs-mentoring/issues"
   },
   "homepage": "https://github.com/attilagal-epam/nodejs-mentoring#readme",
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.14.10",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.5.3"
   }
 }

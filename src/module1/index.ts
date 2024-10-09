@@ -2,6 +2,6 @@
 /*
 Returns: random number between 1 and 1000
 */
-export default function getRandomNumber() {
+export function run() {
     return Math.floor(Math.random() * 1000) + 1;
 }
