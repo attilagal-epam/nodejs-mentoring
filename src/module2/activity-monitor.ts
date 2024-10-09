@@ -1,4 +1,4 @@
-import { appendToFile, executeCmd } from "./utils";
+import { appendToFile, executeCmd } from "./provided";
 
 const supportedPlatforms = {
   windows: "win32",

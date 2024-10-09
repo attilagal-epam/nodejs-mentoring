@@ -1,9 +1,11 @@
 import { run as getRandomNumber } from "./module1";
 import { run as activityMonitor } from "./module2";
+import { run as eventEmitterBufferStreams } from "./module3";
 
 const moduleSolutions = [
     getRandomNumber,
-    activityMonitor
+    activityMonitor,
+    eventEmitterBufferStreams,
 ]
 
 // read the number from the command line but default to 1
